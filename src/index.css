@@ -1,3 +1,39 @@
-h1 {
-    color: red;
-}
+body {
+    background-image: url("https://thumbs.dreamstime.com/b/sand-flowing-hour-glass-hour-glass-background-125260408.jpg");
+    background-repeat: no-repeat;
+    background-position: all;
+    background-size: 100%;
+    background-color: none;
+              }
+          h1{
+              text-align: center;
+              font-weight: bolder;
+              font-size: 25px;
+              font-family: 'Montserrat', sans-serif;
+          }
+          h4{
+              text-align: center;
+              font-weight: light;
+              font-family: 'Montserrat', sans-serif;  
+          }
+          .timer{
+              background-color: #202020;
+              color: #f5f6f6;
+              width: 20%;
+              font-size: 70px;
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+          }
+          #modeBtn, #increaseBtn, #lightBtn{
+              background-color: #202020;
+              color: #f5f6f6;
+              font-size: 17px;
+          }
+          .button{
+  
+              margin-left: auto;
+              margin-right: auto;
+              width: 18%;
+  
+          }

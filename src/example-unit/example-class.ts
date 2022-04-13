@@ -1,28 +1,55 @@
-export class Diagram {
-  actualHour: number
-  actualMinute:number
+export class Timer {
   mode:number
-  increase: number
-  light: boolean
+  increaseMinCPT: number
+  increaseHourCPT:number
+  increase: boolean
+  light: number // 0 if light mode 1 if dark
+  actualHour:number
   constructor() {
-    let today = new Date();
-    this.actualHour=today.getHours();
-    this.actualMinute=today.getMinutes();
     this.mode=0
-    this.increase=0
-    this.light=true
+    this.increaseMinCPT=0
+    this.increaseHourCPT=0
+    this.increase=false
+    this.light=0
   }
 
-  getActualHour(): number {
-    return this.actualHour;
+  getHour(): number {
+    return this.increaseHourCPT;
   }
-  getActualMinute(): number {
-    return this.actualMinute;
+  getMinute(): number {
+    return this.increaseMinCPT;
+  }
+  getMode():number{
+    return this.mode;
+  }
+  getIncrease():boolean{
+    return this.increase;
+  }
+  setIncrease():void{
+    this.increase=true
   }
   incrementHour():void{
-    this.actualHour++
+    this.increaseHourCPT++
   }
   incrementMinute():void{
-    this.actualMinute++
+    this.increaseMinCPT++
+  }
+  resetMode():void{
+    this.mode=0;
+  }
+  switchMode(): void{
+    this.mode++
+  }
+  setLight():void{
+    this.light++
+  }
+  getLight():number{
+    return this.light
+  }
+  setActualHour(hour: number){
+    this.actualHour=hour
+  }
+  getActualHour():number{
+    return this.actualHour
   }
 }
